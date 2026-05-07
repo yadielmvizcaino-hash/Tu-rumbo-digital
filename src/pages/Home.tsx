@@ -4,33 +4,33 @@ import { Camera, Video, Share2, PenTool, Flame, Target, ArrowRight, Compass } fr
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between items-center w-full px-10 h-[80px] z-50 fixed bg-[#121414] border-b-2 border-transparent top-0">
-        <Link to="/" className="text-2xl font-black italic tracking-tighter text-primary-fixed uppercase">TU RUMBO DIGITAL</Link>
+      <nav className="flex justify-between items-center w-full px-6 md:px-10 h-[80px] z-50 fixed bg-[#121414] border-b-2 border-transparent top-0">
+        <Link to="/" className="text-xl md:text-2xl font-black italic tracking-tighter text-primary-fixed uppercase">TU RUMBO DIGITAL</Link>
         <div className="hidden md:flex gap-8 items-center">
           <Link to="/proyectos" className="text-primary-fixed border-b-4 border-primary-fixed font-bold text-sm uppercase transition-all duration-75 pb-1">PROYECTOS</Link>
           <Link to="/servicios" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">SERVICIOS</Link>
           <Link to="/estudio" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">ESTUDIO</Link>
           <Link to="/galeria" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">CONTACTO</Link>
         </div>
-        <button className="bg-primary-fixed text-black px-6 py-3 font-bold text-sm uppercase border-2 border-primary-fixed hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0_0_#ffffff] transition-all flex items-center gap-2">
+        <button className="bg-primary-fixed text-black px-4 md:px-6 py-2 md:py-3 font-bold text-xs md:text-sm uppercase border-2 border-primary-fixed hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0_0_#ffffff] transition-all flex items-center gap-2">
             INICIAR PROYECTO <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
         </button>
       </nav>
 
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-32 border-b-2 border-primary-container bg-grid-pattern overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
-          <img alt="Nightlife scene" className="w-full h-full object-cover" data-alt="A high-contrast, kinetic brutalist style photo of a vibrant, packed nightclub dance floor bathed in intense neon lime and stark white strobe lighting. Deep, inky black shadows contrast sharply with explosive, glowing brights. The camera captures motion blur from energetic dancers, conveying raw power and nightlife dominance. The aesthetic is loud, unapologetic, and highly structured, fitting a professional creative agency portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjrHeB-r-Oxsi2S8SM8T_eMOgnUOuiTUE6bf1zL7YVMiq67yHXyUg8mtQSJQinxnZWZeZNR8l2a_4R-FI0jdsU9GW78RY5QHLHKyPrDERRPxYElc4mkCwGWItqMgNDG5Do8ZGfVEDu64j7EvIY-J-7sNxiFexHSe51M2zqGSJpoZUI3oaQnb7wpsLuEBlaMFFAtOS5MB6fR3bXeeQvlBcM6M30Q_IuZ1p1DuRzleZeEENnZ5z1OmyAGXRYCtEDzZAf6Gsy6Y_iaGo" />
+          <img alt="Nightlife scene" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjrHeB-r-Oxsi2S8SM8T_eMOgnUOuiTUE6bf1zL7YVMiq67yHXyUg8mtQSJQinxnZWZeZNR8l2a_4R-FI0jdsU9GW78RY5QHLHKyPrDERRPxYElc4mkCwGWItqMgNDG5Do8ZGfVEDu64j7EvIY-J-7sNxiFexHSe51M2zqGSJpoZUI3oaQnb7wpsLuEBlaMFFAtOS5MB6fR3bXeeQvlBcM6M30Q_IuZ1p1DuRzleZeEENnZ5z1OmyAGXRYCtEDzZAf6Gsy6Y_iaGo" />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
-        <div className="relative z-10 w-full px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 pt-10">
-          <div className="lg:col-span-11 pl-4">
-            <h1 className="text-[120px] font-black text-white uppercase mb-8 leading-[0.85] tracking-tighter drop-shadow-[0_15px_15px_rgba(0,0,0,0.8)]">
+        <div className="relative z-10 w-full px-6 md:px-10 grid grid-cols-1 lg:grid-cols-12 gap-8 pt-10">
+          <div className="lg:col-span-11 pl-0 md:pl-4">
+            <h1 className="text-6xl md:text-[120px] font-black text-white uppercase mb-8 leading-[0.9] md:leading-[0.85] tracking-tighter drop-shadow-[0_15px_15px_rgba(0,0,0,0.8)]">
                 HACEMOS QUE<br />
                 TU <span className="text-primary-container">NEGOCIO</span><br />
                 BRILLE
             </h1>
             <div className="border-l-4 border-primary-container pl-6 mb-12">
-              <p className="text-3xl font-bold text-gray-300 max-w-2xl leading-tight">
+              <p className="text-xl md:text-3xl font-bold text-gray-300 max-w-2xl leading-tight">
                   Estrategias visuales de alto impacto que dominan la noche.
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function Home() {
       <section className="py-24 px-10 border-b-2 border-primary-container bg-[#121414] relative">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-end mb-16 border-b-2 border-[#333535] pb-8">
-            <h2 className="text-[80px] font-black text-white uppercase leading-none tracking-tighter">
+            <h2 className="text-4xl md:text-[80px] font-black text-white uppercase leading-none tracking-tighter">
               SERVICIOS <br/>
               <span className="text-[#0044FF]">NÚCLEO</span>
             </h2>

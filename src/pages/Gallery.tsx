@@ -22,22 +22,28 @@ export default function Gallery() {
         </header>
 
         <section className="space-y-24">
-          <motion.article 
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start"
+            className="flex gap-8 overflow-x-auto pb-8 snap-x"
           >
-            <div className="md:col-span-7 bg-zinc-800 border-2 border-[#d4ff00] p-8 hard-shadow-lime">
-              <div className="text-[#d4ff00] font-bold text-sm mb-4">01 / CASE STUDY</div>
-              <h2 className="text-5xl font-black uppercase tracking-tighter mb-6">NEON OVERDRIVE</h2>
-              <p className="text-gray-300 text-lg mb-8">Rediseño integral de plataforma de streaming con estética brutalista refinada.</p>
-              <button className="text-[#d4ff00] font-bold uppercase tracking-widest flex items-center gap-2 border-b-2 border-[#d4ff00] pb-1 hover:text-white hover:border-white transition-all">
-                VER PROYECTO <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="md:col-span-5 aspect-square bg-zinc-900 border-2 border-white"></div>
-          </motion.article>
+            {[1, 2, 3].map((i) => (
+              <motion.article 
+                key={i}
+                className="grid grid-cols-1 gap-12 items-start min-w-[80vw] md:min-w-[50vw] snap-center"
+              >
+                <div className="bg-zinc-800 border-2 border-[#d4ff00] p-8 hard-shadow-lime">
+                  <div className="text-[#d4ff00] font-bold text-sm mb-4">0{i} / CASE STUDY</div>
+                  <h2 className="text-5xl font-black uppercase tracking-tighter mb-6">NEON OVERDRIVE</h2>
+                  <p className="text-gray-300 text-lg mb-8">Rediseño integral de plataforma de streaming con estética brutalista refinada.</p>
+                  <button className="text-[#d4ff00] font-bold uppercase tracking-widest flex items-center gap-2 border-b-2 border-[#d4ff00] pb-1 hover:text-white hover:border-white transition-all">
+                    VER PROYECTO <ArrowRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </motion.article>
+            ))}
+          </motion.div>
         </section>
       </motion.main>
 

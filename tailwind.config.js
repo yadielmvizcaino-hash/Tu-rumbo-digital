@@ -41,7 +41,36 @@ export default {
         "tertiary-fixed": "#e5e2e1",
       },
       spacing: {
+        "xs": "8px",
+        "sm": "16px",
+        "base": "4px",
+        "md": "32px",
+        "lg": "64px",
+        "xl": "128px",
         "gutter": "24px",
+        "margin": "40px",
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      fontFamily: {
+        "headline-lg": ["Inter"],
+        "label-bold": ["Space Grotesk"],
+        "vertical-caption": ["Space Grotesk"],
+        "body-base": ["Inter"],
+        "headline-md": ["Inter"],
+        "display-xl": ["Inter"]
+      },
+      fontSize: {
+        "headline-lg": ["64px", {"lineHeight": "110%", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+        "label-bold": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+        "vertical-caption": ["12px", {"lineHeight": "100%", "fontWeight": "500"}],
+        "body-base": ["16px", {"lineHeight": "160%", "letterSpacing": "0em", "fontWeight": "400"}],
+        "headline-md": ["32px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+        "display-xl": ["120px", {"lineHeight": "100%", "letterSpacing": "-0.05em", "fontWeight": "900"}]
       }
     },
   },

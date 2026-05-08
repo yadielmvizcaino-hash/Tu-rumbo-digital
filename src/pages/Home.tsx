@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from "lucide-react";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -8,77 +7,66 @@ export default function Home() {
     <>
       <Navigation />
       
-      <main className="pt-[80px] bg-background text-on-background font-body-base antialiased">
+      <main className="bg-background text-on-background font-body-base antialiased">
         {/* Hero Section */}
-        <section className="relative flex flex-col justify-center px-margin pt-xl pb-lg overflow-hidden border-b-2 border-primary-fixed">
-          <div className="z-10">
-            <p className="text-primary-fixed font-label-bold text-label-bold mb-xs uppercase tracking-[0.2em]">AGENCIA CREATIVA DE ALTO IMPACTO</p>
-            <h1 className="font-display-xl text-display-xl leading-none text-white tracking-tighter mb-md break-words uppercase">
-              HACEMOS QUE TU <br/><span className="text-primary-fixed italic underline decoration-4 underline-offset-8">NEGOCIO</span> BRILLE
+        <section className="relative flex flex-col justify-center px-margin pt-20 pb-32 border-b-2 border-primary-fixed bg-grid-pattern min-h-[921px]">
+          <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
+            <img alt="Nightlife scene" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjrHeB-r-Oxsi2S8SM8T_eMOgnUOuiTUE6bf1zL7YVMiq67yHXyUg8mtQSJQinxnZWZeZNR8l2a_4R-FI0jdsU9GW78RY5QHLHKyPrDERRPxYElc4mkCwGWItqMgNDG5Do8ZGfVEDu64j7EvIY-J-7sNxiFexHSe51M2zqGSJpoZUI3oaQnb7wpsLuEBlaMFFAtOS5MB6fR3bXeeQvlBcM6M30Q_IuZ1p1DuRzleZeEENnZ5z1OmyAGXRYCtEDzZAf6Gsy6Y_iaGo" />
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
+          <div className="relative z-10 max-w-7xl mx-auto w-full">
+            <h1 className="font-display-xl text-[50px] md:text-display-xl leading-none text-white tracking-tighter mb-md break-words uppercase">
+              HACEMOS QUE TU <br/><span className="text-primary-fixed">NEGOCIO</span> BRILLE
             </h1>
-            <div className="flex flex-col gap-4 mt-lg">
-              <Link to="/proyectos" className="w-full md:w-fit bg-primary-fixed text-black py-md px-lg font-headline-md text-headline-md flex justify-between items-center hard-shadow active:translate-y-base transition-transform">
-                EXPLORAR TRABAJOS
-                <ArrowRight className="w-md h-md" />
+            <p className="font-headline-md text-headline-md text-on-surface-variant max-w-3xl mb-lg border-l-4 border-primary-fixed pl-sm">
+                Estrategias visuales de alto impacto que dominan la noche.
+            </p>
+            <div className="flex flex-wrap gap-sm mt-lg">
+              <Link to="/proyectos" className="bg-primary-fixed text-black py-4 px-8 font-label-bold text-label-bold uppercase border-2 border-primary-fixed hard-shadow hover:translate-y-base transition-transform flex items-center gap-xs">
+                VER PORTAFOLIO <span className="material-symbols-outlined">arrow_forward</span>
+              </Link>
+              <Link to="/servicios" className="bg-transparent border-2 border-white text-white py-4 px-8 font-label-bold text-label-bold uppercase hover:bg-white hover:text-black transition-all flex items-center gap-xs">
+                NUESTROS SERVICIOS <span className="material-symbols-outlined">explore</span>
               </Link>
             </div>
           </div>
-        </section>
-
-        {/* Kinetic Marquee */}
-        <section className="bg-primary-fixed py-sm border-b-2 border-black rotate-[-2deg] scale-105 z-20 relative my-lg overflow-hidden">
-          <div className="whitespace-nowrap">
-            <div className="inline-block animate-marquee font-black text-black text-2xl tracking-tighter flex gap-lg items-center">
-              <span>ESTRATEGIA VISUAL • DISEÑO RADICAL • DESARROLLO DE PRODUCTO • BRANDING DISRUPTIVO • MARKETING DE GUERRILLA</span>
+          {/* Vertical Text */}
+          <div className="hidden lg:flex justify-end items-end absolute right-10 top-0 bottom-10 pb-10">
+            <div className="border-l-2 border-primary-fixed pl-xs text-primary-fixed font-vertical-caption text-vertical-caption uppercase [writing-mode:vertical-rl] rotate-180">
+              AGENCIA CREATIVA // EST. 2024 // TU RUMBO DIGITAL
             </div>
           </div>
         </section>
 
-        {/* Services Stack */}
-        <section className="px-margin py-xl bg-background">
-          <h2 className="text-6xl font-black text-white uppercase tracking-tighter mb-md text-center">SERVICIOS</h2>
-          <div className="grid grid-cols-1 gap-md">
-            {[
-              { num: "01/", title: "IDENTIDAD VISUAL", desc: "Sistemas de marca que capturan la atención instantáneamente en mercados saturados." },
-              { num: "02/", title: "DESARROLLO WEB", desc: "Experiencias digitales optimizadas para la conversión con un estilo técnico impecable." },
-              { num: "03/", title: "PAUTA DIGITAL", desc: "Estrategias de crecimiento basadas en datos para maximizar el ROI de tu inversión publicitaria." }
-            ].map((s, i) => (
-              <div key={i} className="border-2 border-primary-fixed p-lg bg-black hover:bg-zinc-900 group transition-colors duration-300">
-                <span className="text-4xl text-primary-fixed mb-md block font-black">{s.num}</span>
-                <h3 className="text-3xl font-bold mb-xs text-white uppercase tracking-tighter">{s.title}</h3>
-                <p className="text-zinc-400 font-body-base">{s.desc}</p>
-              </div>
-            ))}
+        {/* Services */}
+        <section className="px-margin py-xl bg-surface border-b-2 border-primary-fixed">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex justify-between items-end mb-lg border-b-2 border-surface-variant pb-md">
+                <h2 className="font-headline-lg text-headline-lg text-primary uppercase">SERVICIOS <br/><span className="text-primary-fixed">NÚCLEO</span></h2>
+                <div className="hidden md:block font-label-bold text-label-bold text-on-surface-variant uppercase text-right">
+                    LO QUE HACEMOS <br/> MEJOR QUE NADIE
+                </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                {[
+                    { icon: "photo_camera", title: "FOTOGRAFÍA", desc: "Capturamos la esencia cruda y la energía de tus eventos con precisión técnica." },
+                    { icon: "videocam", title: "VIDEO", desc: "Producciones audiovisuales cinemáticas que cuentan historias inmersivas." },
+                    { icon: "share", title: "SOCIAL MEDIA", desc: "Gestión agresiva y estratégica de redes para dominar el feed." },
+                    { icon: "brush", title: "GRAPHIC DESIGN", desc: "Diseño visual brutalista y pulido que exige atención inmediata." },
+                    { icon: "local_fire_department", title: "BRANDING", desc: "Construcción de identidades de marca sólidas e inconfundibles." },
+                    { icon: "ads_click", title: "DIGITAL ADS", desc: "Campañas de conversión letales optimizadas para ROI máximo." }
+                ].map((s, i) => (
+                    <div key={i} className="bg-surface-container p-md brutal-border group hover:-translate-y-2 transition-transform relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-primary-fixed -mr-8 -mt-8 rotate-45 transform group-hover:scale-150 transition-transform"></div>
+                        <span className="material-symbols-outlined text-4xl text-primary-fixed mb-sm relative z-10">{s.icon}</span>
+                        <h3 className="font-headline-md text-headline-md text-primary uppercase mb-xs relative z-10">{s.title}</h3>
+                        <p className="font-body-base text-on-surface-variant relative z-10">{s.desc}</p>
+                    </div>
+                ))}
+            </div>
           </div>
         </section>
 
-        {/* Proyectos Recientes */}
-        <section className="px-margin py-xl bg-white text-black">
-          <h2 className="text-6xl font-black uppercase tracking-tighter mb-lg leading-none">PROYECTOS RECIENTES</h2>
-          <article className="space-y-md">
-            <div className="border-4 border-black p-2">
-              <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4ki4AsfGD82QtSaxcWfDWwDjoTGC9kbwEzh8-Zczr6Ctj4CpUAnZBsX91I1ixOxJD6nbhSG4jSEoZ8MkqQLTU3rFh53lD0H_zST1rrjyuk4HV12EGRn6GVzQLusxPPxGUFRzo5baCIvHdAV_7MdfEAO7CSlmVxKX9KH3ysGceqjT6xBpK2B3tQTVLrvBx3DX9FS0pSklS9WlQf-MD-v1XoLpdUn-mn6xCc29z-CJrrBl8UbBkRob5X5HXwubsb67KEDbCgbbZClk" alt="Proy" className="w-full aspect-[16/9] object-cover" />
-            </div>
-            <p className="font-bold text-zinc-500 uppercase">TECH RETAIL</p>
-            <h4 className="text-4xl font-black uppercase tracking-tighter">NEON CORE V.1 ★</h4>
-            <div className="bg-black text-white p-lg border-r-[12px] border-b-[12px] border-primary-fixed mt-md">
-                <p className="text-primary-fixed font-bold uppercase mb-xs">CASE STUDY</p>
-                <h4 className="text-2xl font-black mb-md uppercase">¿CÓMO ESCALAMOS UNA STARTUP FINTECH UN 300%?</h4>
-                <Link to="/proyectos" className="text-primary-fixed font-black underline underline-offset-4 uppercase tracking-widest text-sm">LEER MÁS →</Link>
-            </div>
-          </article>
-        </section>
-
-        {/* Contact Form */}
-        <section className="px-margin py-xl bg-background border-t-2 border-primary-fixed">
-          <h2 className="text-6xl font-black text-white mb-lg uppercase tracking-tighter">¿LISTO PARA EL IMPACTO?</h2>
-          <form className="space-y-md max-w-lg">
-            <input className="w-full bg-transparent border-2 border-zinc-700 p-md text-white outline-none focus:border-primary-fixed" placeholder="TU NOMBRE" />
-            <input className="w-full bg-transparent border-2 border-zinc-700 p-md text-white outline-none focus:border-primary-fixed" placeholder="EMAIL" type="email" />
-            <textarea className="w-full bg-transparent border-2 border-zinc-700 p-md text-white outline-none focus:border-primary-fixed" placeholder="MENSAJE" rows={4} />
-            <button className="w-full bg-primary-fixed text-black py-md font-black uppercase text-xl hover:bg-white transition-colors" type="submit">ENVIAR PROPUESTA</button>
-          </form>
-        </section>
       </main>
 
       <Footer />

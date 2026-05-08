@@ -1,36 +1,19 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Menu, X } from "lucide-react";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
-    <nav className="flex justify-between items-center w-full px-6 md:px-10 h-[80px] z-50 fixed bg-[#121414] border-b-2 border-transparent top-0">
-      <Link to="/" className="text-xl md:text-2xl font-black italic tracking-tighter text-primary-fixed uppercase">TU RUMBO DIGITAL</Link>
+    <nav className="flex flex-col md:flex-row justify-between items-center w-full px-4 md:px-10 py-4 z-50 sticky bg-black border-b-2 border-primary-fixed top-0 gap-4 md:gap-0">
+      <Link to="/" className="text-xl md:text-2xl font-black italic tracking-tighter text-primary-fixed uppercase self-start md:self-auto shrink-0">TU RUMBO DIGITAL</Link>
       
-      <div className="hidden md:flex gap-8 items-center">
-        <Link to="/proyectos" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">PROYECTOS</Link>
-        <Link to="/servicios" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">SERVICIOS</Link>
-        <Link to="/estudio" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">ESTUDIO</Link>
-        <Link to="/galeria" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">CONTACTO</Link>
-        <button className="bg-primary-fixed text-black px-4 md:px-6 py-2 md:py-3 font-bold text-xs md:text-sm uppercase border-2 border-primary-fixed hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0_0_#ffffff] transition-all flex items-center gap-2">
-            INICIAR PROYECTO <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
+      <div className="flex gap-6 md:gap-8 items-center overflow-x-auto w-full md:w-auto font-black tracking-tighter uppercase hide-scrollbar">
+        <Link to="/proyectos" className="text-primary-fixed border-b-2 border-primary-fixed pb-1 whitespace-nowrap hover:bg-primary-fixed hover:text-black transition-all duration-100 shrink-0">PROYECTOS</Link>
+        <Link to="/servicios" className="text-white hover:text-primary-fixed hover:bg-primary-fixed hover:text-black transition-all duration-100 whitespace-nowrap shrink-0">SERVICIOS</Link>
+        <Link to="/estudio" className="text-white hover:text-primary-fixed hover:bg-primary-fixed hover:text-black transition-all duration-100 whitespace-nowrap shrink-0">ESTUDIO</Link>
+        <Link to="/galeria" className="text-white hover:text-primary-fixed hover:bg-primary-fixed hover:text-black transition-all duration-100 whitespace-nowrap shrink-0">CONTACTO</Link>
+        <button className="hidden md:flex ml-4 bg-primary-fixed text-black font-label-bold text-label-bold px-6 py-3 border-2 border-primary-fixed hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#ffffff] transition-all items-center gap-2 shrink-0">
+            INICIAR PROYECTO <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
         </button>
       </div>
-
-      <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-      </button>
-
-      {isOpen && (
-        <div className="absolute top-[80px] left-0 w-full bg-[#121414] border-b-2 border-primary-fixed flex flex-col items-center gap-6 py-8 md:hidden">
-          <Link to="/proyectos" className="text-white font-bold text-lg uppercase" onClick={() => setIsOpen(false)}>PROYECTOS</Link>
-          <Link to="/servicios" className="text-white font-bold text-lg uppercase" onClick={() => setIsOpen(false)}>SERVICIOS</Link>
-          <Link to="/estudio" className="text-white font-bold text-lg uppercase" onClick={() => setIsOpen(false)}>ESTUDIO</Link>
-          <Link to="/galeria" className="text-white font-bold text-lg uppercase" onClick={() => setIsOpen(false)}>CONTACTO</Link>
-        </div>
-      )}
     </nav>
   );
 }

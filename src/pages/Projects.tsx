@@ -18,7 +18,7 @@ export default function Projects() {
           animate={{ x: 0, opacity: 1 }}
           className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-16"
         >
-          GALERÍA <span className="text-[#d4ff00] italic">PROYECTOS</span>
+          GALERÍA <span className="text-[#ffe600] italic">PROYECTOS</span>
         </motion.h1>
         
         <motion.div 
@@ -27,8 +27,8 @@ export default function Projects() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 gap-10"
         >
-            <div className="aspect-square bg-zinc-800 border-2 border-[#d4ff00] hard-shadow-lime hover:scale-105 transition-transform duration-300"></div>
-            <div className="aspect-square bg-zinc-800 border-2 border-[#d4ff00] hard-shadow-lime hover:scale-105 transition-transform duration-300"></div>
+            <div className="aspect-square bg-zinc-800 border-2 border-[#ffe600] hard-shadow-yellow hover:scale-105 transition-transform duration-300"></div>
+            <div className="aspect-square bg-zinc-800 border-2 border-[#ffe600] hard-shadow-yellow hover:scale-105 transition-transform duration-300"></div>
         </motion.div>
       </motion.main>
 

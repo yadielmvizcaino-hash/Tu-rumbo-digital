@@ -44,8 +44,11 @@
   .hard-shadow {
     box-shadow: 8px 8px 0px 0px #ffffff;
   }
+  .hard-shadow-yellow {
+    box-shadow: 8px 8px 0px 0px #ffe600;
+  }
   .brutal-border {
-    border: 2px solid #d4ff00;
+    border: 2px solid #ffe600;
   }
   .bg-grid-pattern {
     background-image: linear-gradient(to right, #333535 1px, transparent 1px), linear-gradient(to bottom, #333535 1px, transparent 1px);

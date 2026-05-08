@@ -19,7 +19,7 @@ export default function Studio() {
             animate={{ x: 0, opacity: 1 }}
             className="text-6xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter"
           >
-            SOMOS <br/><span className="text-[#d4ff00]">TU RUMBO.</span>
+            SOMOS <br/><span className="text-[#ffe600]">TU RUMBO.</span>
           </motion.h1>
           <motion.p 
             initial={{ x: 50, opacity: 0 }}
@@ -34,7 +34,7 @@ export default function Studio() {
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="bg-[#d4ff00] text-black p-12 hard-shadow"
+          className="bg-[#ffe600] text-black p-12 hard-shadow"
         >
             <h2 className="text-sm font-bold uppercase tracking-widest mb-4">MANIFIESTO</h2>
             <p className="text-4xl font-black uppercase tracking-tighter leading-tight">El impacto no es un accidente. La belleza sin fuerza es solo decoración.</p>

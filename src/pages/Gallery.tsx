@@ -14,10 +14,10 @@ export default function Gallery() {
         transition={{ duration: 0.5 }}
         className="pt-[120px] pb-24 px-10 bg-zinc-950 text-white font-body-base antialiased"
       >
-        <header className="mb-16 flex flex-col md:flex-row justify-between items-end gap-6 border-b-2 border-[#d4ff00] pb-8">
+        <header className="mb-16 flex flex-col md:flex-row justify-between items-end gap-6 border-b-2 border-[#ffe600] pb-8">
           <div className="max-w-4xl">
-            <span className="text-[#d4ff00] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">CASOS DE ÉXITO</span>
-            <h1 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter">RESULTADOS QUE <span className="text-[#d4ff00]">GOLPEAN</span>.</h1>
+            <span className="text-[#ffe600] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">CASOS DE ÉXITO</span>
+            <h1 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter">RESULTADOS QUE <span className="text-[#ffe600]">GOLPEAN</span>.</h1>
           </div>
         </header>
 
@@ -33,11 +33,11 @@ export default function Gallery() {
                 key={i}
                 className="grid grid-cols-1 gap-12 items-start min-w-[80vw] md:min-w-[50vw] snap-center"
               >
-                <div className="bg-zinc-800 border-2 border-[#d4ff00] p-8 hard-shadow-lime">
-                  <div className="text-[#d4ff00] font-bold text-sm mb-4">0{i} / CASE STUDY</div>
+                <div className="bg-zinc-800 border-2 border-[#ffe600] p-8 hard-shadow-yellow">
+                  <div className="text-[#ffe600] font-bold text-sm mb-4">0{i} / CASE STUDY</div>
                   <h2 className="text-5xl font-black uppercase tracking-tighter mb-6">NEON OVERDRIVE</h2>
                   <p className="text-gray-300 text-lg mb-8">Rediseño integral de plataforma de streaming con estética brutalista refinada.</p>
-                  <button className="text-[#d4ff00] font-bold uppercase tracking-widest flex items-center gap-2 border-b-2 border-[#d4ff00] pb-1 hover:text-white hover:border-white transition-all">
+                  <button className="text-[#ffe600] font-bold uppercase tracking-widest flex items-center gap-2 border-b-2 border-[#ffe600] pb-1 hover:text-white hover:border-white transition-all">
                     VER PROYECTO <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>

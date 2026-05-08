@@ -1,21 +1,12 @@
 import { Link } from 'react-router-dom';
 import { Camera, Video, Share2, PenTool, Flame, Target, ArrowRight, Compass } from "lucide-react";
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
     <>
-      <nav className="flex justify-between items-center w-full px-6 md:px-10 h-[80px] z-50 fixed bg-[#121414] border-b-2 border-transparent top-0">
-        <Link to="/" className="text-xl md:text-2xl font-black italic tracking-tighter text-primary-fixed uppercase">TU RUMBO DIGITAL</Link>
-        <div className="hidden md:flex gap-8 items-center">
-          <Link to="/proyectos" className="text-primary-fixed border-b-4 border-primary-fixed font-bold text-sm uppercase transition-all duration-75 pb-1">PROYECTOS</Link>
-          <Link to="/servicios" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">SERVICIOS</Link>
-          <Link to="/estudio" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">ESTUDIO</Link>
-          <Link to="/galeria" className="text-white font-bold text-sm uppercase hover:text-primary-fixed transition-all duration-75">CONTACTO</Link>
-        </div>
-        <button className="bg-primary-fixed text-black px-4 md:px-6 py-2 md:py-3 font-bold text-xs md:text-sm uppercase border-2 border-primary-fixed hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[4px_4px_0_0_#ffffff] transition-all flex items-center gap-2">
-            INICIAR PROYECTO <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
-        </button>
-      </nav>
+      <Navigation />
 
       <section className="relative min-h-[90vh] flex items-center pt-24 pb-32 border-b-2 border-primary-container bg-grid-pattern overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40 mix-blend-luminosity">
@@ -103,22 +94,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="w-full pt-16 pb-8 bg-[#121414]">
-        <div className="px-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 border-t border-[#d4ff00] pt-16">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-3xl font-black text-primary-fixed uppercase tracking-tighter">TU RUMBO DIGITAL</h2>
-            <div className="font-bold text-[10px] text-primary-fixed tracking-[0.3em] uppercase">
-              © 2024 TU RUMBO DIGITAL. ALL RIGHTS RESERVED.
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-8 font-bold text-sm text-gray-500 tracking-[0.2em] uppercase">
-            <Link to="/" className="hover:text-white transition-colors duration-200">INSTAGRAM</Link>
-            <Link to="/" className="hover:text-white transition-colors duration-200">LINKEDIN</Link>
-            <Link to="/" className="hover:text-white transition-colors duration-200">BEHANCE</Link>
-            <Link to="/" className="hover:text-white transition-colors duration-200">NEWSLETTER</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

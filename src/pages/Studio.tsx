@@ -1,0 +1,15 @@
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+export default function Studio() {
+  return (
+    <>
+      <Navigation />
+      <div className="pt-32 pb-24 px-10 text-white min-h-screen">
+        <h1 className="text-4xl font-black uppercase tracking-tighter">Estudio</h1>
+        <p className="mt-4">Contenido de Estudio en construcción.</p>
+      </div>
+      <Footer />
+    </>
+  );
+}

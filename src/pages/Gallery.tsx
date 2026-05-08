@@ -12,12 +12,12 @@ export default function Gallery() {
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }} 
         transition={{ duration: 0.5 }}
-        className="pt-[120px] pb-24 px-10 bg-zinc-950 text-white font-body-base antialiased"
+        className="pt-[120px] pb-24 px-margin bg-background text-on-background font-body-base antialiased min-h-screen"
       >
-        <header className="mb-16 flex flex-col md:flex-row justify-between items-end gap-6 border-b-2 border-[#ffe600] pb-8">
-          <div className="max-w-4xl">
-            <span className="text-[#ffe600] font-bold text-sm uppercase tracking-[0.2em] mb-4 block">CASOS DE ÉXITO</span>
-            <h1 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter">RESULTADOS QUE <span className="text-[#ffe600]">GOLPEAN</span>.</h1>
+        <header className="mb-16 flex flex-col md:flex-row justify-between items-end gap-6 border-b-2 border-primary-fixed pb-8">
+          <div className="max-w-4xl w-full">
+            <span className="text-primary-fixed font-label-bold text-label-bold uppercase tracking-[0.2em] mb-4 block">CASOS DE ÉXITO</span>
+            <h1 className="font-display-xl text-[50px] md:text-[80px] text-white uppercase leading-none tracking-tighter break-words w-full">RESULTADOS QUE <span className="text-primary-fixed">GOLPEAN</span>.</h1>
           </div>
         </header>
 
@@ -26,18 +26,18 @@ export default function Gallery() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="flex gap-8 overflow-x-auto pb-8 snap-x"
+            className="flex gap-8 overflow-x-auto pb-8 snap-x hide-scrollbar"
           >
             {[1, 2, 3].map((i) => (
               <motion.article 
                 key={i}
-                className="grid grid-cols-1 gap-12 items-start min-w-[80vw] md:min-w-[50vw] snap-center"
+                className="grid grid-cols-1 gap-12 items-start min-w-[85vw] md:min-w-[50vw] snap-center shrink-0"
               >
-                <div className="bg-zinc-800 border-2 border-[#ffe600] p-8 hard-shadow-yellow">
-                  <div className="text-[#ffe600] font-bold text-sm mb-4">0{i} / CASE STUDY</div>
-                  <h2 className="text-5xl font-black uppercase tracking-tighter mb-6">NEON OVERDRIVE</h2>
-                  <p className="text-gray-300 text-lg mb-8">Rediseño integral de plataforma de streaming con estética brutalista refinada.</p>
-                  <button className="text-[#ffe600] font-bold uppercase tracking-widest flex items-center gap-2 border-b-2 border-[#ffe600] pb-1 hover:text-white hover:border-white transition-all">
+                <div className="bg-surface-container border-2 border-primary-fixed p-lg hard-shadow-yellow w-full">
+                  <div className="text-primary-fixed font-label-bold text-label-bold mb-4 uppercase">0{i} / CASE STUDY</div>
+                  <h2 className="font-headline-lg text-headline-lg text-white uppercase tracking-tighter mb-6 break-words w-full">NEON OVERDRIVE</h2>
+                  <p className="text-on-surface-variant font-body-base mb-8 max-w-xl">Rediseño integral de plataforma de streaming con estética brutalista refinada.</p>
+                  <button className="text-primary-fixed font-label-bold text-label-bold uppercase flex items-center gap-2 border-b-2 border-primary-fixed pb-1 hover:text-white hover:border-white transition-all w-max w-full md:w-max">
                     VER PROYECTO <ArrowRight className="w-5 h-5" />
                   </button>
                 </div>

@@ -11,14 +11,14 @@ export default function Projects() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="pt-[120px] pb-24 px-10 bg-zinc-950 text-white min-h-screen antialiased"
+        className="pt-[120px] pb-24 px-margin bg-background text-on-background min-h-screen antialiased"
       >
         <motion.h1 
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-16"
+          className="font-display-xl text-[50px] md:text-[80px] text-white uppercase leading-none tracking-tighter mb-16 break-words w-full"
         >
-          GALERÍA <span className="text-[#ffe600] italic">PROYECTOS</span>
+          GALERÍA <span className="text-primary-fixed italic">PROYECTOS</span>
         </motion.h1>
         
         <motion.div 
@@ -27,8 +27,8 @@ export default function Projects() {
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 gap-10"
         >
-            <div className="aspect-square bg-zinc-800 border-2 border-[#ffe600] hard-shadow-yellow hover:scale-105 transition-transform duration-300"></div>
-            <div className="aspect-square bg-zinc-800 border-2 border-[#ffe600] hard-shadow-yellow hover:scale-105 transition-transform duration-300"></div>
+            <div className="aspect-square bg-surface-container border-2 border-primary-fixed hard-shadow-yellow hover:scale-105 transition-transform duration-300 w-full"></div>
+            <div className="aspect-square bg-surface-container border-2 border-primary-fixed hard-shadow-yellow hover:scale-105 transition-transform duration-300 w-full"></div>
         </motion.div>
       </motion.main>
 
